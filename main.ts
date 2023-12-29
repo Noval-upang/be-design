@@ -9,11 +9,10 @@ dotenv.config()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(cors({
-   origin(requestOrigin, callback) {
-      /https:\/\/design-web-production.up.railway.app/.test(requestOrigin!) ? callback(null, true) : callback(null, false);
-   },
+   origin: "https://design-web-production.up.railway.app",
    methods:"POST, GET",
-   allowedHeaders:"application/json",
+   optionsSuccessStatus:200,
+   allowedHeaders:"Content-Type"
 }))
 
 app.get("/test", (_, res)=> {
