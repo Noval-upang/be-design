@@ -8,7 +8,12 @@ dotenv.config()
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
-app.use(cors({origin:process.env.ORIGIN, methods:"POST"}))
+app.use(cors({
+   origin:"http://design-web-production.up.railway.app", 
+   methods:"POST, GET",
+   allowedHeaders:"application/json",
+   
+}))
 
 app.get("/test", (_, res)=> {
    return res.json({data: "Ok"})
