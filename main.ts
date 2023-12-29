@@ -11,7 +11,7 @@ app.use(cors({origin:process.env.ORIGIN, methods:"POST"}))
 
 app.post("/add", (req, res)=>{
 
-   res.json({data: req.body.data ? req.body.data : "kosong"})
+   res.json({data: !req.body.data ?   "kosong" : req.body.data})
 })
 
 app.listen("8000", ()=>console.log("runing"))
