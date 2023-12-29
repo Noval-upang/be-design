@@ -9,6 +9,10 @@ dotenv.config()
 app.use(express.json())
 app.use(cors({origin:process.env.ORIGIN, methods:"POST"}))
 
+app.post("/test", (req, res)=> {
+   res.json({data: "Ok"})
+})
+
 app.post("/add", (req, res)=>{
 
    res.json({data: !req.body.data ?   "kosong" : req.body.data})
