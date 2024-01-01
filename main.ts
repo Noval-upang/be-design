@@ -16,8 +16,6 @@ app.use(cors({
    optionsSuccessStatus:200
 }))
 
-
-
 app.use(router)
 
 app.listen("8000", ()=>console.log("runing"))
