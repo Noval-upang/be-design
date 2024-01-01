@@ -8,10 +8,10 @@ const
 
 dotenv.config()
 
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors({
-   origin: "*",
+   origin: "design-web-production.up.railway.app",
    methods:"POST, GET",
    optionsSuccessStatus:200
 }))

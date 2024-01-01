@@ -3,7 +3,7 @@ import express from "express";
 const router = express.Router()
 
 router.get("/test", (_, res)=> {
-   return res.json({data: "Ok"})
+   return res.send("OK")
 })
 
 router.post("/add", (req, res)=>{
