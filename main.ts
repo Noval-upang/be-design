@@ -14,4 +14,4 @@ app.use(cors())
 
 app.use(router)
 
-app.listen("8000", ()=>console.log("runing"))
+app.listen(process.env.PORT, ()=>console.log("runing"))
